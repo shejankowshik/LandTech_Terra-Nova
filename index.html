@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eff7f4">
+  <meta name="description" content="সহজ ভাষায় বাংলাদেশের ই-নামজারি প্রস্তুতি, কাগজপত্র ও ধাপ বুঝে নিন।">
+  <title>e-Mutation Sahayak — ই-নামজারি সহায়ক</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">মূল অংশে যান</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="e-Mutation Sahayak home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M5 16.5 20 7l15 9.5v16H5z"/><path d="M12 32V20h16v12M17 20v12m6-12v12M5 16.5h30"/><path d="m15 13 5-3 5 3"/></svg></span>
+      <span><strong>ই-নামজারি সহায়ক</strong><small>e-Mutation Sahayak</small></span>
+    </a>
+    <nav class="top-nav" aria-label="Primary navigation">
+      <a href="#panel-learn" data-i18n="navLearn">কাগজ চিনুন</a>
+      <a href="#panel-checklist" data-i18n="navChecklist">চেকলিস্ট</a>
+      <a href="#panel-steps" data-i18n="navSteps">ধাপগুলো</a>
+    </nav>
+    <button id="languageToggle" class="lang-toggle" type="button" aria-label="Switch language">English <span>↗</span></button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span><span data-i18n="heroEyebrow">বাংলাদেশের ভূমিসেবা, সহজ ভাষায়</span></div>
+        <h1 data-i18n="heroTitle">নামজারি বুঝুন,<br><em>আত্মবিশ্বাসে এগোন।</em></h1>
+        <p class="hero-lede" data-i18n="heroLede">কোন কাগজ কী কাজে লাগে, আপনার কী কী লাগবে, আর আবেদন আটকে গেলে পরের পদক্ষেপ কী—সব এক জায়গায়।</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#panel-checklist"><span data-i18n="heroCta">আমার কাগজ মিলিয়ে দেখি</span><span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#panel-learn"><span data-i18n="heroSecondary">আগে কাগজগুলো চিনে নিই</span><span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-trust"><span class="trust-icon">✓</span><span data-i18n="trustLine">শুধু নমুনা তথ্য · কোনো ব্যক্তিগত তথ্য লাগবে না</span></div>
+      </div>
+      <div class="hero-art" aria-label="Land record illustration">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+        <div class="plot plot-back"></div><div class="plot plot-mid"></div><div class="plot plot-front"></div>
+        <div class="art-house"><div class="house-roof"></div><div class="house-body"><span></span><i></i></div></div>
+        <div class="art-tree tree-a"><b></b><i></i></div><div class="art-tree tree-b"><b></b><i></i></div>
+        <div class="map-tag"><span class="map-tag-icon">⌖</span><span><small data-i18n="mapTagTop">মৌজা নকশা</small><strong data-i18n="mapTagBottom">দাগ · সীমানা · জমি</strong></span></div>
+        <div class="record-float"><span class="file-icon">▤</span><span><small>RS KHATIAN</small><strong>খতিয়ান ১২৪</strong></span><b>✓</b></div>
+        <div class="art-caption" data-i18n="artCaption">জমির তথ্য মিলিয়ে নিন</div>
+      </div>
+    </section>
+
+    <section class="demo-strip" aria-label="Interactive demonstration">
+      <div class="demo-intro"><span class="demo-icon">✳</span><span><strong data-i18n="demoTitle">কেস ল্যাব · নমুনা ফলাফল দেখুন</strong><small data-i18n="demoSub">ভিন্ন কেস বেছে কাগজ ও সিদ্ধান্ত বুঝে নিন</small></span></div>
+      <label class="case-select-wrap"><span class="sr-only" data-i18n="chooseCase">নমুনা কেস বাছুন</span>
+        <select id="caseSelect" aria-label="Choose a sample case">
+          <option value="sale">রহিমা · ক্রয় · অনুমোদিত নমুনা</option>
+          <option value="inheritance">জামিল · ওয়ারিশ · কাগজ বাকি</option>
+          <option value="hearing">নমুনা আদেশ · শুনানি / দলিল ঘাটতি</option>
+          <option value="mismatch">আয়েশা · তথ্যের গরমিল · নামঞ্জুর নমুনা</option>
+          <option value="complex">মালিকানা বিরোধ · অফিসে যাচাই দরকার</option>
+        </select><span class="select-arrow">⌄</span>
+      </label>
+      <span class="demo-only"><span class="demo-only-dot"></span><span data-i18n="demoOnly">ডেমো</span></span>
+    </section>
+
+    <section class="case-summary" aria-live="polite">
+      <div class="case-location"><span class="pin">⌖</span><span><small data-i18n="sampleCase">নমুনা আবেদন</small><strong id="caseHeading">রহিমা · ক্রয়সূত্রে নামজারি</strong></span></div>
+      <div class="case-facts"><span><small data-i18n="locationLabel">অবস্থান</small><strong id="caseLocation">সাভার, ঢাকা · মৌজা কালামপুর</strong></span><span><small data-i18n="recordLabel">রেকর্ড</small><strong id="casePlot">RS ১২৪ · দাগ ৫৮ · ০.০৮ একর</strong></span></div>
+      <div id="caseStatus" class="status-pill status-approved"><span class="status-dot"></span><span id="caseStatusText">নমুনা: অনুমোদিত</span></div>
+    </section>
+
+    <div class="section-tabs" role="tablist" aria-label="প্রোটোটাইপের বিভাগ">
+      <button id="tab-overview" class="section-tab active" role="tab" aria-controls="panel-overview" aria-selected="true" tabindex="0" data-panel="overview"><span>01</span><b data-i18n="tabOverview">এক নজরে</b></button>
+      <button id="tab-learn" class="section-tab" role="tab" aria-controls="panel-learn" aria-selected="false" tabindex="-1" data-panel="learn"><span>02</span><b data-i18n="tabLearn">জমির কাগজ</b></button>
+      <button id="tab-checklist" class="section-tab" role="tab" aria-controls="panel-checklist" aria-selected="false" tabindex="-1" data-panel="checklist"><span>03</span><b data-i18n="tabChecklist">কাগজের তালিকা</b></button>
+      <button id="tab-ownership" class="section-tab" role="tab" aria-controls="panel-ownership" aria-selected="false" tabindex="-1" data-panel="ownership"><span>04</span><b data-i18n="tabOwnership">মালিকানার ধারা</b></button>
+      <button id="tab-steps" class="section-tab" role="tab" aria-controls="panel-steps" aria-selected="false" tabindex="-1" data-panel="steps"><span>05</span><b data-i18n="tabSteps">আবেদনের ধাপ</b></button>
+      <button id="tab-decision" class="section-tab" role="tab" aria-controls="panel-decision" aria-selected="false" tabindex="-1" data-panel="decision"><span>06</span><b data-i18n="tabDecision">ফলাফল ও করণীয়</b></button>
+    </div>
+
+    <div class="panels-wrap">
+      <section class="panel active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
+        <div class="panel-heading"><div><div class="eyebrow eyebrow-dark"><span class="tiny-diamond">◆</span><span data-i18n="overviewEyebrow">শুরু করার আগে</span></div><h2 data-i18n="overviewTitle">নামজারি কী, আর কেন দরকার?</h2></div><p data-i18n="overviewDesc">মালিকানা বদলের পর সরকারি ভূমি রেকর্ডে নতুন মালিকের নাম হালনাগাদ করার প্রক্রিয়াই নামজারি। এটি জমির কাগজপত্র যাচাই ও রেকর্ড ঠিক রাখতে সাহায্য করে।</p></div>
+        <div class="overview-grid">
+          <article class="overview-card overview-card-main"><div class="card-topline"><span class="card-icon icon-green">⌂</span><span class="micro-label" data-i18n="plainTalk">সহজ করে বললে</span></div><h3 data-i18n="overviewCardTitle">দলিল থেকে হালনাগাদ খতিয়ান</h3><p data-i18n="overviewCardText">জমি কেনা, উত্তরাধিকার, দান বা আদালতের রায়ে মালিকানা বদলালে—সংশ্লিষ্ট কাগজ দেখিয়ে ভূমি অফিসে রেকর্ড হালনাগাদের আবেদন করা হয়। ই-নামজারি সেই আবেদন অনলাইনে করার ব্যবস্থা।</p><a href="#panel-steps" class="inline-link" data-goto="steps"><span data-i18n="seeProcess">প্রক্রিয়াটি দেখুন</span> ↗</a></article>
+          <article class="overview-card overview-card-mint"><span class="card-icon icon-light">◎</span><span class="micro-label" data-i18n="remember">মনে রাখুন</span><h3 data-i18n="recordNotDeed">খতিয়ান দলিল নয়</h3><p data-i18n="recordNotDeedDesc">খতিয়ান হলো জরিপভিত্তিক ভূমি-রেকর্ড। মালিকানার ইতিহাস বুঝতে দলিল, উত্তরাধিকার ও অন্যান্য প্রমাণের সঙ্গে মিলিয়ে দেখুন।</p></article>
+          <article class="overview-card overview-card-sand"><span class="card-icon icon-sand">↗</span><span class="micro-label" data-i18n="yourNextStep">আপনার পরের ধাপ</span><h3 data-i18n="startWithDocs">কাগজের তালিকা দিয়ে শুরু</h3><p data-i18n="startWithDocsDesc">ক্রয়, ওয়ারিশ, দান—কোন সূত্রে জমি পেয়েছেন তার উপর দরকারি নথি বদলাতে পারে।</p><a href="#panel-checklist" class="inline-link" data-goto="checklist"><span data-i18n="checkYourList">তালিকা মিলিয়ে নিন</span> ↗</a></article>
+        </div>
+        <div class="quick-roadmap"><div class="roadmap-label"><span data-i18n="journeyLabel">আপনার যাত্রাপথ</span><small data-i18n="journeySub">শুরু থেকে খতিয়ান পর্যন্ত</small></div><div class="roadmap-items"><div><span class="road-num">1</span><b data-i18n="road1">কাগজ গুছান</b></div><i></i><div><span class="road-num">2</span><b data-i18n="road2">আবেদন জমা</b></div><i></i><div><span class="road-num">3</span><b data-i18n="road3">যাচাই / শুনানি</b></div><i></i><div><span class="road-num">4</span><b data-i18n="road4">আদেশ ও খতিয়ান</b></div></div><button class="road-arrow" data-goto="steps" aria-label="View application steps">↗</button></div>
+        <div class="notice-card"><span class="notice-symbol">i</span><p data-i18n="overviewNotice">এই সাইটটি নাগরিকদের প্রস্তুতিতে সাহায্য করার নমুনা প্রোটোটাইপ। এটি সরকারি পোর্টাল নয় এবং চূড়ান্ত আইনি বা মালিকানা সিদ্ধান্ত দেয় না।</p></div>
+      </section>
+
+      <section class="panel" id="panel-learn" role="tabpanel" aria-labelledby="tab-learn" tabindex="0" hidden>
+        <div class="panel-heading"><div><div class="eyebrow eyebrow-dark"><span class="tiny-diamond">◆</span><span data-i18n="learnEyebrow">কাগজ চিনে রাখুন</span></div><h2 data-i18n="learnTitle">জমির কাগজ—কোনটা কী বলে?</h2></div><p data-i18n="learnDesc">একটি কাগজে সব উত্তর থাকে না। নমুনা কাগজগুলোর কাজ জানুন, তারপর একই মৌজা, দাগ, পরিমাণ ও নাম মিলিয়ে দেখুন।</p></div>
+        <div id="documentCards" class="document-grid"></div>
+        <div class="record-note"><div class="record-note-mark">!</div><div><strong data-i18n="recordNoteTitle">একটি গুরুত্বপূর্ণ কথা</strong><p data-i18n="recordNoteBody">CS, SA, RS, BS / BRS—এগুলো বিভিন্ন সময়ের জরিপ রেকর্ড। আপনার এলাকার সর্বশেষ প্রযোজ্য রেকর্ডটি আবেদন ও যাচাইয়ে কাজে লাগে। কোন রেকর্ড প্রযোজ্য বুঝতে না পারলে স্থানীয় ভূমি অফিসে জেনে নিন।</p></div></div>
+        <div class="source-line"><span data-i18n="sourceLabel">তথ্যসূত্র:</span> <a href="https://minland.gov.bd/pages/static-pages/694032dc35ce18e1c056393d" target="_blank" rel="noreferrer" data-i18n="ministryKhatian">ভূমি মন্ত্রণালয় — খতিয়ান কী?</a> <span>·</span> <a href="https://map.settlement.gov.bd/" target="_blank" rel="noreferrer" data-i18n="dlrsMap">DLRS — জরিপ ও মৌজা ম্যাপ</a></div>
+      </section>
+
+      <section class="panel" id="panel-checklist" role="tabpanel" aria-labelledby="tab-checklist" tabindex="0" hidden>
+        <div class="panel-heading"><div><div class="eyebrow eyebrow-dark"><span class="tiny-diamond">◆</span><span data-i18n="checkEyebrow">আবেদনের আগে</span></div><h2 data-i18n="checkTitle">আপনার কাগজের তালিকা</h2></div><p data-i18n="checkDesc">নমুনা কেস বাছলে তালিকাটি সেই সূত্র অনুযায়ী বদলায়। বাক্সে টিক দিয়ে প্রস্তুতির অবস্থা দেখুন।</p></div>
+        <div class="check-layout">
+          <div class="check-main"><div class="check-toolbar"><span class="check-for"><span class="mini-check">✓</span><span data-i18n="checkFor">এই কেসের জন্য</span> <strong id="checkType">ক্রয়সূত্র</strong></span><span class="required-mark"><i></i><span data-i18n="requiredLegend">আবশ্যক / সাধারণত লাগে</span></span></div><div id="checklistItems" class="checklist-items"></div><div class="check-footnote"><span>i</span><span data-i18n="checkFootnote">কিছু কাগজ শুধু নির্দিষ্ট পরিস্থিতিতে লাগে। অফিসিয়াল নির্দেশনা ও আপনার কেস অনুযায়ী তালিকা মিলিয়ে নিন।</span></div></div>
+          <aside class="check-progress"><div class="progress-head"><span class="progress-icon">▤</span><span class="micro-label" data-i18n="prepStatus">প্রস্তুতির অবস্থা</span></div><div class="progress-number"><strong id="checkCount">6</strong><span id="checkTotal">/ 6</span></div><p id="checkProgressText" data-i18n="allReady">সব কাগজ প্রস্তুত বলে চিহ্নিত</p><div class="progress-track"><span id="progressBar"></span></div><div id="checkCallout" class="progress-callout"><span>✓</span><span data-i18n="readyCallout">ভালো! আবেদন শুরুর আগে আসল কাগজে তথ্য মিলিয়ে নিন।</span></div><button class="button button-dark" data-goto="steps"><span data-i18n="nextProcess">পরের ধাপ দেখুন</span><span>→</span></button></aside>
+        </div>
+        <div class="ownership-shortcut"><div><strong data-i18n="checkOwnershipTitle">কাগজের তালিকার পর মালিকানার যোগসূত্রও মিলিয়ে নিন</strong><p data-i18n="checkOwnershipDesc">রেকর্ডের মালিক, বিক্রেতা/পূর্বসূরি, আবেদনকারী, দাগ ও জমির পরিমাণ একসঙ্গে দেখে নিন।</p></div><button class="button button-dark" type="button" data-goto="ownership"><span data-i18n="checkOwnershipAction">মালিকানার ধারা পরীক্ষা</span><span>→</span></button></div>
+      </section>
+
+      <section class="panel" id="panel-ownership" role="tabpanel" aria-labelledby="tab-ownership" tabindex="0" hidden>
+        <div class="panel-heading"><div><div class="eyebrow eyebrow-dark"><span class="tiny-diamond">◆</span><span data-i18n="ownershipEyebrow">আবেদনের আগে তথ্য মিলান</span></div><h2 data-i18n="ownershipTitle">মালিকানা কীভাবে আপনার কাছে এলো?</h2></div><p data-i18n="ownershipDesc">রেকর্ডের মালিক থেকে বিক্রেতা/পূর্বসূরি, তারপর আবেদনকারী—এই যোগসূত্রের কাগজ আছে কি না এবং দাগ-পরিমাণ মেলে কি না নিজে যাচাই করুন।</p></div>
+        <div class="ownership-layout">
+          <div class="ownership-main">
+            <div class="ownership-flow" aria-live="polite">
+              <div class="ownership-node"><small data-i18n="chainRecordLabel">খতিয়ানের রেকর্ডীয় মালিক</small><strong id="chainRecordName">—</strong></div><span class="ownership-arrow" aria-hidden="true">→</span>
+              <div class="ownership-node"><small id="chainSourceLabel">বিক্রেতা / দাতা</small><strong id="chainSourceName">—</strong></div><span class="ownership-arrow" aria-hidden="true">→</span>
+              <div class="ownership-node ownership-node-current"><small data-i18n="chainApplicantLabel">বর্তমান আবেদনকারী</small><strong id="chainApplicantName">—</strong></div>
+            </div>
+            <div class="ownership-fields">
+              <label><span data-i18n="recordOwnerField">রেকর্ডে থাকা মালিকের নাম</span><input id="recordOwnerInput" autocomplete="off"></label>
+              <label><span id="sourceOwnerField">বিক্রেতা / দাতা / পূর্বসূরির নাম</span><input id="sourceOwnerInput" autocomplete="off"></label>
+              <label><span data-i18n="applicantField">আবেদনকারীর নাম</span><input id="applicantInput" autocomplete="off"></label>
+              <label><span data-i18n="applicantDocNameField">দলিল / ওয়ারিশ কাগজে আবেদনকারীর নাম</span><input id="applicantDocNameInput" autocomplete="off"></label>
+              <label><span data-i18n="recordMouzaField">খতিয়ানে থাকা মৌজার নাম</span><input id="recordMouzaInput" autocomplete="off"></label>
+              <label><span data-i18n="documentMouzaField">দলিল / ওয়ারিশ কাগজে থাকা মৌজার নাম</span><input id="documentMouzaInput" autocomplete="off"></label>
+              <label><span data-i18n="recordPlotField">রেকর্ডের দাগ নম্বর</span><input id="recordPlotInput" autocomplete="off"></label>
+              <label><span data-i18n="documentPlotField">দলিল / ওয়ারিশ কাগজের দাগ</span><input id="documentPlotInput" autocomplete="off"></label>
+              <label><span data-i18n="recordAreaField">রেকর্ডে মালিকের জমি (একর)</span><input id="recordAreaInput" inputmode="decimal" autocomplete="off"></label>
+              <label><span data-i18n="sourceAreaField">বিক্রেতা / পূর্বসূরির নিজের অংশ (একর)</span><input id="sourceAreaInput" inputmode="decimal" autocomplete="off"></label>
+              <label><span data-i18n="claimedAreaField">এই আবেদনে দাবি করা জমি (একর)</span><input id="claimedAreaInput" inputmode="decimal" autocomplete="off"></label>
+            </div>
+            <div class="ownership-confirmations">
+              <label><input id="sourceLinkCheck" type="checkbox"><span data-i18n="sourceLinkCheck">রেকর্ডের মালিক থেকে বিক্রেতা/পূর্বসূরি পর্যন্ত যোগসূত্রের কাগজ মিলিয়েছি (মাঝে অন্য মালিক থাকলে তার কাগজসহ)।</span></label>
+              <label><input id="applicantLinkCheck" type="checkbox"><span data-i18n="applicantLinkCheck">দলিল / ওয়ারিশের কাগজে আবেদনকারীর অধিকার বা সম্পর্ক দেখানো আছে।</span></label>
+            </div>
+            <div class="ownership-actions"><button id="checkOwnershipButton" class="button button-primary" type="button"><span data-i18n="checkOwnershipButton">তথ্য মিলিয়ে দেখি</span><span>↗</span></button><button id="resetOwnershipButton" class="text-button" type="button" data-i18n="resetOwnershipButton">নমুনা তথ্য ফিরিয়ে আনুন</button></div>
+          </div>
+          <aside class="ownership-explainer"><div class="ownership-badge">⌂</div><h3 data-i18n="ownershipAsideTitle">এই যাচাই কী করবে?</h3><p data-i18n="ownershipAsideText">আপনার লেখা নাম, দাগ ও জমির পরিমাণ তুলনা করে সম্ভাব্য অমিল দেখাবে। দলিল পড়ে না, সরকারি রেকর্ডে প্রবেশ করে না এবং মালিকানা বা আবেদন মঞ্জুরের সিদ্ধান্ত দেয় না।</p><div class="ownership-mini-note"><strong data-i18n="ownershipPrivacyTitle">তথ্য আপনার ব্রাউজারেই</strong><span data-i18n="ownershipPrivacyText">এই ডেমোতে তথ্য সার্ভারে পাঠানো বা সংরক্ষণ করা হয় না। বাস্তব NID নম্বর/দলিল নম্বর দেবেন না।</span></div></aside>
+        </div>
+        <div id="ownershipResult" class="ownership-result" aria-live="polite"><span class="result-mark">i</span><div><strong data-i18n="ownershipInitialTitle">নমুনা তথ্য দেখুন, তারপর প্রয়োজনে নিজের সাধারণ তথ্য দিয়ে মিলিয়ে নিন</strong><p data-i18n="ownershipInitialText">ফলাফলটি প্রস্তুতির সহায়ক—ভূমি অফিসের যাচাইয়ের বিকল্প নয়।</p></div></div>
+        <div class="ownership-guidance"><strong data-i18n="ownershipGuidanceTitle">মিল না পেলেই জালিয়াতি বা নামঞ্জুর—এমন নয়</strong><p data-i18n="ownershipGuidanceText">একই দাগ বা জমির পরিমাণের অমিলের পেছনে অংশবণ্টন, আগের হস্তান্তর বা রেকর্ড সংশোধনের বিষয় থাকতে পারে। আপনার আদেশে যে কাগজ/তথ্য চাওয়া হয়েছে সেটিই আগে দেখুন।</p><a class="inline-link" href="#panel-checklist" data-goto="checklist"><span data-i18n="ownershipToChecklist">কাগজের তালিকায় ফিরে যান</span> ↗</a> <a class="inline-link" href="#panel-decision" data-goto="decision"><span data-i18n="ownershipToNotice">আদেশের ভাষা বুঝুন</span> ↗</a></div>
+      </section>
+
+      <section class="panel" id="panel-steps" role="tabpanel" aria-labelledby="tab-steps" tabindex="0" hidden>
+        <div class="panel-heading"><div><div class="eyebrow eyebrow-dark"><span class="tiny-diamond">◆</span><span data-i18n="stepsEyebrow">অনলাইন আবেদন</span></div><h2 data-i18n="stepsTitle">শুরু থেকে শেষ—ধাপে ধাপে</h2></div><p data-i18n="stepsDesc">আবেদন দাখিল, অফিসের যাচাই ও সিদ্ধান্ত—প্রতিটি ধাপে আবেদন নম্বরটি সংরক্ষণ করুন।</p></div>
+        <div class="process-layout"><div id="processSteps" class="process-list"></div><aside class="fee-card"><div class="fee-card-head"><span class="fee-icon">৳</span><span><small data-i18n="feesLabel">সরকারি ফি · নির্দেশিকা অনুযায়ী</small><strong data-i18n="feeVaries">ফি ধাপভেদে</strong></span></div><div class="fee-row"><span data-i18n="applicationNotice">আবেদন ও নোটিশ ফি</span><strong>৳70</strong></div><div class="fee-row"><span data-i18n="approvedFee">অনুমোদনের পর DCR ফি</span><strong>৳1,100</strong></div><div class="fee-total"><span data-i18n="feeTotalNote">অনুমোদন পেলে মোট</span><strong>৳1,170</strong></div><p class="fee-disclaimer" data-i18n="feeDisclaimer">ফি ও সেবার নিয়ম বদলাতে পারে। পেমেন্টের আগে সরকারি ই-নামজারি পোর্টালে বর্তমান ফি যাচাই করুন।</p><a class="official-link" href="https://mutation.land.gov.bd/" target="_blank" rel="noreferrer"><span data-i18n="openOfficial">সরকারি ই-নামজারি পোর্টাল</span><span>↗</span></a></aside></div>
+        <div class="service-help"><span class="help-phone">☎</span><span><small data-i18n="needHelp">সহায়তা দরকার?</small><strong data-i18n="callLine">ভূমিসেবা কল সেন্টার: ১৬১২২</strong></span><a href="tel:16122" aria-label="Call 16122">↗</a></div>
+        <div class="source-line"><span data-i18n="sourceLabel">তথ্যসূত্র:</span> <a href="https://mutation.land.gov.bd/nirdeshika" target="_blank" rel="noreferrer" data-i18n="officialGuide">ভূমি মন্ত্রণালয়ের ই-নামজারি নির্দেশিকা</a> <span>·</span> <a href="https://mutation.land.gov.bd/namjari-steps" target="_blank" rel="noreferrer" data-i18n="officialSteps">নামজারির ধাপ</a></div>
+      </section>
+
+      <section class="panel" id="panel-decision" role="tabpanel" aria-labelledby="tab-decision" tabindex="0" hidden>
+        <div class="panel-heading"><div><div class="eyebrow eyebrow-dark"><span class="tiny-diamond">◆</span><span data-i18n="decisionEyebrow">আবেদনের পর</span></div><h2 data-i18n="decisionTitle">ফলাফল এলে কী করবেন?</h2></div><p data-i18n="decisionDesc">আবেদন অনুমোদন, অতিরিক্ত ব্যাখ্যা চাওয়া বা নামঞ্জুর—যাই হোক, কারণটি বুঝে তারপর পরের পদক্ষেপ নিন।</p></div>
+        <div class="decision-layout"><article id="decisionCard" class="decision-card"></article><aside class="decision-aside"><div class="aside-symbol">?</div><h3 data-i18n="rejectionGuideTitle">নামঞ্জুর হলে</h3><ol><li data-i18n="rejectStep1">ট্র্যাকিংয়ে দেওয়া নির্দিষ্ট কারণটি পড়ুন এবং আদেশের কপি রাখুন।</li><li data-i18n="rejectStep2">কোন তথ্য বা কাগজে গরমিল, সেটি সংশ্লিষ্ট আসল নথির সঙ্গে মিলিয়ে নিন।</li><li data-i18n="rejectStep3">প্রয়োজন হলে ভূমি অফিসে ব্যাখ্যা নিন; এরপর সংশোধিত কাগজসহ পুনরায় আবেদনের পথ জেনে নিন।</li></ol><a class="inline-link" href="https://mutation.land.gov.bd/" target="_blank" rel="noreferrer"><span data-i18n="trackApplication">সরকারি পোর্টালে আবেদন ট্র্যাক করুন</span> ↗</a></aside></div>
+        <div class="decision-reminder"><span class="reminder-icon">i</span><p data-i18n="decisionReminder">কাগজের তালিকায় সব বাক্সে টিক থাকলেও অনুমোদন নিশ্চিত হয় না। ভূমি অফিস মালিকানার ধারাবাহিকতা, রেকর্ড, দখল ও অন্যান্য প্রাসঙ্গিক তথ্য যাচাই করে।</p></div>
+        <article class="order-example">
+          <div class="order-example-head"><span class="order-example-icon">▤</span><span><small data-i18n="orderSourceLabel">আপনার শেয়ার করা নামঞ্জুর আদেশ থেকে</small><strong data-i18n="orderExampleTitle">সংক্ষিপ্ত কারণ আর বিস্তারিত অংশ—দুটোই পড়ুন</strong></span><span class="example-chip" data-i18n="anonymizedExample">ব্যক্তিগত তথ্য বাদ দিয়ে</span></div>
+          <div class="order-decoder">
+            <div><small data-i18n="orderShortLabel">সংক্ষিপ্ত কারণ</small><strong data-i18n="orderShortText">“অনুপস্থিতি” · “অসম্পূর্ণ আবেদন”</strong></div>
+            <div><small data-i18n="orderDetailLabel">বিস্তারিত শুনানির অংশ</small><strong data-i18n="orderDetailText">আবেদনকারী হাজির ছিলেন; বিপক্ষ অনুপস্থিত ছিল, এবং আবেদনকারী মালিকানার পক্ষে দলিল দেখাতে পারেননি।</strong></div>
+            <div><small data-i18n="orderMeaningLabel">সহজ অর্থ</small><strong data-i18n="orderMeaningText">শুধু “অনুপস্থিতি” শব্দ দেখে কে অনুপস্থিত ছিলেন ধরে নেবেন না। পূর্ণ আদেশে কার হাজিরা, কী কাগজ, আর কোন ঘাটতির কথা বলা আছে দেখুন।</strong></div>
+          </div>
+        </article>
+        <div class="reason-library-head"><div><div class="eyebrow eyebrow-dark"><span class="tiny-diamond">◆</span><span data-i18n="reasonEyebrow">কারণ বুঝে করণীয়</span></div><h3 data-i18n="reasonTitle">নামঞ্জুরের সম্ভাব্য কারণ—সহজ ভাষায়</h3></div><p data-i18n="reasonIntro">এগুলো সাধারণ উদাহরণ, স্বয়ংক্রিয় সিদ্ধান্ত নয়। আপনার আদেশে লেখা নির্দিষ্ট কারণই আগে দেখুন।</p></div>
+        <div id="reasonCards" class="reason-grid"></div>
+        <div class="name-note"><span class="name-note-icon">✓</span><p data-i18n="nameDifferenceNote"><strong>নামের বানানে সামান্য পার্থক্য হলেই আবেদন স্বয়ংক্রিয়ভাবে নামঞ্জুর হওয়ার কথা নয়।</strong> NID নম্বর এক হলে, বা পরিচয় প্রমাণে আরও কাগজ দরকার হলে, অফিস ব্যাখ্যা/প্রমাণ চাইতে পারে।</p></div>
+        <section class="notice-explainer" aria-labelledby="noticeExplainerTitle">
+          <div class="notice-explainer-head"><div><div class="eyebrow eyebrow-dark"><span class="tiny-diamond">◆</span><span data-i18n="noticeEyebrow">আদেশের ভাষা সহজ করে</span></div><h3 id="noticeExplainerTitle" data-i18n="noticeTitle">নামঞ্জুরের আদেশ বুঝে পরের কাজ ঠিক করুন</h3><p data-i18n="noticeDesc">আদেশের কারণের অংশ এখানে পেস্ট করুন, অথবা নিচের নমুনা নিন। পরিচিত বাক্যগুলো মিলিয়ে সহজ অর্থ ও করণীয় দেখানো হবে।</p></div><button id="loadNoticeSample" class="text-button" type="button" data-i18n="loadNoticeSample">নমুনা আদেশ বসান</button></div>
+          <label class="notice-input-label" for="noticeText" data-i18n="noticeInputLabel">আদেশ / নোটিশের প্রাসঙ্গিক লেখা</label>
+          <textarea id="noticeText" rows="5" spellcheck="false" placeholder="এখানে আদেশে লেখা কারণের অংশ পেস্ট করুন"></textarea>
+          <div class="notice-actions"><button id="explainNoticeButton" class="button button-primary" type="button"><span data-i18n="explainNoticeButton">সহজ ভাষায় বুঝি</span><span>↗</span></button><span data-i18n="noticePrivacy">শুধু আপনার ব্রাউজারে মিলিয়ে দেখা হয়; লেখা কোথাও পাঠানো বা সংরক্ষণ করা হয় না।</span></div>
+          <div id="noticeResult" class="notice-result" aria-live="polite"><div class="notice-result-empty" data-i18n="noticeInitial">আদেশের লেখা পেস্ট করে “সহজ ভাষায় বুঝি” চাপুন।</div></div>
+          <p class="notice-safety" data-i18n="noticeSafety">এই ব্যাখ্যা সাধারণ সহায়তা। অপরিচিত বা জটিল আদেশে নিশ্চিত ব্যাখ্যা না দিয়ে আমরা ভূমি অফিসে যাচাই করতে বলব। নোটিশে লেখা সময়সীমাই অনুসরণ করুন।</p>
+        </section>
+        <div class="source-line"><span data-i18n="sourceLabel">তথ্যসূত্র:</span> <a href="https://bhumipedia.land.gov.bd/uploads/PDF/Act/All_circular_-14-26_kxKEoQD.pdf" target="_blank" rel="noreferrer" data-i18n="rejectionCircular">ভূমি মন্ত্রণালয়ের নামজারি নিষ্পত্তি ও সুনির্দিষ্ট কারণের নির্দেশনা</a> <span>·</span> <a href="https://mutation.land.gov.bd/namjari-steps" target="_blank" rel="noreferrer" data-i18n="officialSteps">নামজারির ধাপ ও ফলাফল ট্র্যাক</a></div>
+      </section>
+    </div>
+
+    <section class="bottom-cta"><div class="cta-mark"><span>⌂</span></div><div><small data-i18n="bottomEyebrow">একটু একটু করে এগোন</small><h2 data-i18n="bottomTitle">আগে তথ্য মিলিয়ে নিন, তারপর আবেদন।</h2><p data-i18n="bottomText">আপনার কাগজ, মৌজা ও দাগ নম্বর একসঙ্গে রেখে প্রস্তুতি শুরু করুন।</p></div><button class="button button-light" data-goto="checklist"><span data-i18n="bottomButton">চেকলিস্টে ফিরুন</span><span>↗</span></button><div class="cta-decoration"></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand brand-footer" href="#top"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M5 16.5 20 7l15 9.5v16H5z"/><path d="M12 32V20h16v12m-11-12v12m6-12v12M5 16.5h30"/></svg></span><span><strong>ই-নামজারি সহায়ক</strong><small>e-Mutation Sahayak</small></span></a><p data-i18n="footerDisclaimer">নাগরিক প্রস্তুতি সহায়ক · সরকারি সেবা নয় · কোনো বাস্তব আবেদন জমা হয় না</p><a href="https://mutation.land.gov.bd/" target="_blank" rel="noreferrer" data-i18n="officialSite">সরকারি পোর্টাল ↗</a></footer>
+</body>
+</html>
